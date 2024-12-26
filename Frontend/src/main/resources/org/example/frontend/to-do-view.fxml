@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="807.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.frontend.controller.TaskController">
+   <children>
+      <AnchorPane layoutX="61.0" layoutY="163.0" prefHeight="599.0" prefWidth="335.0" style="-fx-background-color: white;">
+         <children>
+            <ScrollPane fx:id="paneShowTasks" hbarPolicy="NEVER" layoutX="23.0" layoutY="149.0" prefHeight="445.0" prefWidth="286.0" style="-fx-background-color: white;">
+               <content>
+                  <VBox fx:id="taskListContainer" />
+               </content>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.2977099120616913" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ScrollPane>
+
+            <Button fx:id="btnMorningTasks" layoutX="54.0" layoutY="66.0" mnemonicParsing="false" onAction="#actMorningTasks" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #CE69A5;" text="Morning tasks" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.3015267252922058" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <Button fx:id="btnAfternoonTasks" layoutX="174.0" layoutY="66.0" mnemonicParsing="false" onAction="#actAfternoonTasks" style="-fx-background-color: #6A6E9D;" text="Afternoon tasks" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.3015267252922058" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <Button fx:id="btnAllTasks" layoutX="174.0" layoutY="104.0" mnemonicParsing="false" onAction="#actAllTasks" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: black;" text="All tasks" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.3015267252922058" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <Button fx:id="btnEveningTasks" layoutX="54.0" layoutY="104.0" mnemonicParsing="false" onAction="#actEveningTasks" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #A63740;" text="Evening tasks" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.3015267252922058" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <Label layoutX="112.0" layoutY="8.0" text="Show lists">
+               <font>
+                  <Font name="Gabriola" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblDate" layoutX="343.0" layoutY="63.0" prefHeight="124.0" prefWidth="293.0" text="2024-12-30">
+         <font>
+            <Font name="Gabriola" size="77.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="443.0" layoutY="439.0" minHeight="-Infinity" prefHeight="323.0" prefWidth="286.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="67.0" layoutY="21.0" prefHeight="45.0" prefWidth="152.0" text="Add new task">
+               <font>
+                  <Font name="Gabriola" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="66.0" text="Title:">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="128.0" text="Description:">
+               <font>
+                  <Font name="Gabriola" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfTaskTitle" layoutX="24.0" layoutY="96.0" prefHeight="25.0" prefWidth="239.0" />
+            <TextArea fx:id="txaTaskDescription" layoutX="23.0" layoutY="158.0" prefHeight="72.0" prefWidth="239.0" />
+            <RadioButton fx:id="radioMorningTask" layoutX="25.0" layoutY="247.0" mnemonicParsing="false" text="Morning ">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TaskTime" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioAfternoonTask" layoutX="98.0" layoutY="247.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Afternoon" toggleGroup="$TaskTime" />
+            <RadioButton fx:id="radioEveningTask" layoutX="184.0" layoutY="247.0" mnemonicParsing="false" text="Evening" toggleGroup="$TaskTime" />
+            <Button fx:id="btnAddTask" layoutX="92.0" layoutY="285.0" mnemonicParsing="false" onAction="#actAddTask" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: white;" text="Add task">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.20610687136650085" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label fx:id="lblResponse" layoutX="28.0" layoutY="579.0" prefHeight="25.0" prefWidth="219.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imgAllDay" fitHeight="255.0" fitWidth="253.0" layoutX="459.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../ori_3811575_3denpkosk6sw7wlmtu7u3l22o24uzt1hbuzzp058_different-times-of-day-night-and-morning-noon-and-evening-4-times-v.jpg" />
+         </image>
+         <effect>
+            <DropShadow radius="7.8025" width="12.21">
+               <color>
+                  <Color opacity="0.442748099565506" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="351.0" layoutY="-9.0" prefHeight="145.0" prefWidth="253.0" text="To-Do ">
+         <font>
+            <Font name="Gabriola" size="120.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgCheckList" fitHeight="131.0" fitWidth="132.0" layoutX="202.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../checkList.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow>
+         <color>
+            <Color opacity="0.7900763154029846" />
+         </color>
+      </InnerShadow>
+   </effect>
+</AnchorPane>
