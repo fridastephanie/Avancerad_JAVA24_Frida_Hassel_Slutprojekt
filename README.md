@@ -131,7 +131,7 @@ Den grafiska användargränssnittet är byggt med JavaFX och består av följand
 * TaskFactory: Fabrik för att skapa olika typer av Task-objekt
 
 ## Övrigt
-* Applikationen är skapad i IntelliJ IDEA 2024.2.3 med följande teknikstack:
+* Applikationen är skapad i IntelliJ IDEA 2024.2.3 med:
   * Backend: Spring Boot 2.x
   * Frontend: JavaFX 23.0.1
 * Backend-servern körs på http://localhost:8080
