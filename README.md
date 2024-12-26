@@ -1,4 +1,4 @@
-# Slutuppgift - *To-Do List Management System*
+# Slutprojekt - *To-Do List Management System*
 
 
 ## Om projektet
