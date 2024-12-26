@@ -2,7 +2,7 @@
 
 
 ## Om projektet
-Detta projekt är en fullstack-applikation som låter användare hantera sina dagliga uppgifter genom en To-Do lista. 
+Detta projekt är en applikation som låter användare hantera sina dagliga uppgifter genom en To-Do lista. 
 Applikationen består av en frontend byggd med JavaFX för att skapa ett grafiskt användargränssnitt (GUI) och en backend som är byggd med Spring Boot för att hantera affärslogik och API-anrop.
 
 #### *Projektets funktionalitet:*
