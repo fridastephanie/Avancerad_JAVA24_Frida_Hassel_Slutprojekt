@@ -88,9 +88,9 @@ Content-Type: application/json<br>
 Request:<br>
 {<br>
   "title": "Kvällspromenad",<br>
-  "description": "Ta en promenad i parken",<br<
+  "description": "Ta en promenad i parken",<br>
   "type": "Evening",<br>
-  "cchecked": true<br>
+  "checked": true<br>
 }<br>
 Response:<br>
 {<br>
